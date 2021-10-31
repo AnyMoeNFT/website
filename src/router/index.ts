@@ -8,6 +8,13 @@ const routes: RouteRecordRaw[] = [
   },
 ];
 
+if (import.meta.env.VITE_START_UP === 'local') {
+  routes.push({
+    path: '/ui-test',
+    component: () => import('@/pages/test/index.vue'),
+  });
+}
+
 export default createRouter({
   history: createWebHistory(),
   routes,
