@@ -36,6 +36,9 @@ export default defineComponent({
 .a-clickable-text:hover {
   color: var(--text-80);
 }
+.a-clickable-text:active {
+  color: var(--text-70);
+}
 .a-clickable-text--secondary {
   color: var(--text-secondary);
   cursor: pointer;
@@ -43,10 +46,16 @@ export default defineComponent({
 .a-clickable-text--secondary:hover {
   color: var(--text-secondary-80);
 }
+.a-clickable-text--secondary:active {
+  color: var(--text-secondary-70);
+}
 .a-clickable-text--primary {
   color: var(--primary);
 }
 .a-clickable-text--primary:hover {
   color: var(--primary-80);
+}
+.a-clickable-text--primary:active {
+  color: var(--primary-70);
 }
 </style>

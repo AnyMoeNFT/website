@@ -1,5 +1,11 @@
 <template>
-  <div class="a-card" :style="cardStyle">
+  <div
+    :class="{
+      'a-card': true,
+      'a-card--fulfill': fulfill,
+    }"
+    :style="cardStyle"
+  >
     <div class="a-card-header" v-if="hasHeader">
       <span class="a-card-header__title">{{ title }}</span>
       <slot name="header"></slot>
@@ -32,6 +38,10 @@ export default defineComponent({
       type: [Number, String],
       default: 240,
     },
+    fulfill: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props) {
     const hasHeader = !!useSlots().header || !!props.title;
@@ -55,12 +65,13 @@ export default defineComponent({
   position: relative;
   box-shadow: 0 6px 20px var(--shadow-5);
   border-radius: 16px;
+  overflow: hidden;
   > div {
     box-sizing: border-box;
   }
   &-header {
     width: 100%;
-    padding: 12px 16px 4px 16px;
+    padding: 10px 18px 4px 18px;
     &__title {
       color: var(--text);
       font-size: 18px;
@@ -77,10 +88,10 @@ export default defineComponent({
     width: 100%;
     height: max-content;
     position: relative;
-    padding: 0px 16px;
+    padding: 0px 18px 12px 18px;
   }
   &-body--no-header {
-    padding-top: 16px;
+    padding-top: 14px;
   }
   &-body--no-footer {
     padding-bottom: 16px;
@@ -89,7 +100,13 @@ export default defineComponent({
     width: 100%;
     height: max-content;
     position: relative;
-    padding: 8px 16px 14px 16px;
+    padding: 10px 18px 14px 18px;
+    background: var(--bg-lighter);
+  }
+}
+.a-card--fulfill {
+  .a-card-body {
+    padding: 0;
   }
 }
 </style>

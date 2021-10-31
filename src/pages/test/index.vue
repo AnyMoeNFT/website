@@ -30,8 +30,20 @@
           <a-card title="Title">
             <p>With header</p>
           </a-card>
+          <a-card>
+            <p>With footer</p>
+            <template v-slot:footer>
+              <p>This is a footer</p>
+            </template>
+          </a-card>
           <a-card title="Title">
             <p>With header and footer</p>
+            <template v-slot:footer>
+              <p>This is a footer</p>
+            </template>
+          </a-card>
+          <a-card fulfill>
+            <p>This is a fulfill body</p>
             <template v-slot:footer>
               <p>This is a footer</p>
             </template>
@@ -63,7 +75,7 @@
   &:deep(.testground-flex) {
     display: flex;
     * {
-      margin-right: 16px;
+      margin-right: 18px;
     }
     *:last-child {
       margin-right: 0;

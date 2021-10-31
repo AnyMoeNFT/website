@@ -24,12 +24,16 @@ export default defineComponent({
   --primary-85: rgba(15, 111, 239, 0.85);
   --primary-80: rgba(15, 111, 239, 0.8);
   --primary-75: rgba(15, 111, 239, 0.75);
-  --bg: #fcfcfc;
+  --primary-70: rgba(15, 111, 239, 0.7);
+  --bg: #fafafa;
+  --bg-lighter: #dedede;
   --btn: #fff;
   --text: #202224;
   --text-secondary: #999;
   --text-80: rgba(32, 34, 36, 0.8);
+  --text-70: rgba(32, 34, 36, 0.7);
   --text-secondary-80: rgba(153, 153, 153, 0.8);
+  --text-secondary-70: rgba(153, 153, 153, 0.7);
   --shadow-5: rgba(0, 0, 0, 0.05);
   --shadow-10: rgba(0, 0, 0, 0.1);
   --shadow-20: rgba(0, 0, 0, 0.2);
@@ -40,10 +44,13 @@ export default defineComponent({
 @mixin darkmode {
   :root {
     --bg: #1e1e1e;
+    --bg-lighter: #2a2a2a;
     --text: #f2f2f2;
     --text-80: rgba(242, 242, 242, 0.8);
+    --text-70: rgba(242, 242, 242, 0.7);
     --text-secondary: #4e4e4e;
     --text-secondary-80: rgba(78, 78, 78, 0.8);
+    --text-secondary-70: rgba(78, 78, 78, 0.7);
     --shadow-5: rgba(255, 255, 255, 0.05);
     --shadow-10: rgba(255, 255, 255, 0.1);
     --shadow-20: rgba(255, 255, 255, 0.2);
