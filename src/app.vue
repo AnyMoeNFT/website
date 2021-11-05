@@ -42,8 +42,8 @@ export default defineComponent({
   --shadow-20: rgba(0, 0, 0, 0.2);
   --shadow-25: rgba(0, 0, 0, 0.3);
   --shadow-40: rgba(0, 0, 0, 0.4);
-  --font-normal: Nunito, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-normal: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 // basic layout styles
