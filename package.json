@@ -2,6 +2,7 @@
   "name": "anymoe-web",
   "version": "0.1.0",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",

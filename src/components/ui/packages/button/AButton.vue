@@ -51,7 +51,7 @@ export default defineComponent({
   background: var(--bg);
   color: var(--primary);
   border-radius: 4px;
-  box-shadow: 2px 4px 8px var(--shadow-5);
+  box-shadow: 2px 4px 16px var(--shadow-20);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.05rem;
@@ -71,7 +71,7 @@ export default defineComponent({
 .a-button--primary {
   background: var(--primary);
   color: var(--btn);
-  box-shadow: 0 4px 8px var(--shadow-10);
+  box-shadow: 0 4px 10px var(--shadow-20);
   border: none;
 }
 .a-button--primary:hover {
@@ -87,6 +87,6 @@ export default defineComponent({
 }
 .a-button--anim:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--shadow-20);
+  box-shadow: 0 4px 16px var(--shadow-25);
 }
 </style>

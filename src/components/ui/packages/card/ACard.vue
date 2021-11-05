@@ -63,9 +63,10 @@ export default defineComponent({
 .a-card {
   height: max-content;
   position: relative;
-  box-shadow: 0 6px 20px var(--shadow-5);
+  box-shadow: 0 4px 28px var(--shadow-20);
   border-radius: 16px;
   overflow: hidden;
+  background: var(--bg-alter);
   > div {
     box-sizing: border-box;
   }
@@ -101,7 +102,7 @@ export default defineComponent({
     height: max-content;
     position: relative;
     padding: 10px 18px 14px 18px;
-    background: var(--bg-lighter);
+    background: var(--bg-darker);
   }
 }
 .a-card--fulfill {
