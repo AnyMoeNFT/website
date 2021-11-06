@@ -5,6 +5,7 @@ import ClickableText from './packages/clickableText';
 import Input from './packages/input';
 import Split from './packages/split';
 import Float from './packages/float';
+import './styles/index.scss';
 
 const components = [Button, Card, ClickableText, Input, Split, Float];
 
