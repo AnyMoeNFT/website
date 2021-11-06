@@ -1,6 +1,15 @@
 {
   "name": "anymoe-web",
   "version": "0.1.0",
+  "author": {
+    "name": "AnyMoe Team"
+  },
+  "maintainers": [
+    {
+      "name": "BackRunner",
+      "url": "https://github.com/backrunner"
+    }
+  ],
   "scripts": {
     "start": "vite",
     "dev": "vite",
