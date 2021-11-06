@@ -1,6 +1,6 @@
 <template>
   <div class="page-footer">
-    <a-split round :margin="20"></a-split>
+    <a-split round :margin="16"></a-split>
     <div class="page-footer__content">
       <div class="logo">
         <Logo />

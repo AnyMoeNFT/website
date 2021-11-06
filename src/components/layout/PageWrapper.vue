@@ -36,7 +36,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .page {
   width: 100%;
-  min-height: 100vh;
   max-width: 1200px;
   padding: 0 24px;
   position: relative;
