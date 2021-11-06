@@ -42,6 +42,7 @@ export default defineComponent({
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  user-select: none;
   .logo {
     width: 54px;
     height: 54px;
@@ -49,9 +50,15 @@ export default defineComponent({
     filter: drop-shadow(4px 4px 2px var(--shadow-10));
     transform: translateY(-2px);
     margin-right: 22px;
+    &:deep(.a-button) {
+      box-shadow: 0px 4px 16px var(--shadow-10);
+    }
   }
   .search {
     flex: 1;
+    &:deep(.a-input__inner) {
+      box-shadow: 0px 4px 16px var(--shadow-10);
+    }
   }
   .connect {
     margin-left: 20px;

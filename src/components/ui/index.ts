@@ -3,8 +3,10 @@ import Button from './packages/button';
 import Card from './packages/card';
 import ClickableText from './packages/clickableText';
 import Input from './packages/input';
+import Split from './packages/split';
+import Float from './packages/float';
 
-const components = [Button, Card, ClickableText, Input];
+const components = [Button, Card, ClickableText, Input, Split, Float];
 
 const installer = (app: App) => {
   components.forEach((comp) => {

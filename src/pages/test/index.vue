@@ -69,6 +69,22 @@
           </a-card>
         </div>
       </div>
+      <div class="testground-content__item">
+        <p class="testground-content-title">Split</p>
+        <div class="testground-flex">
+          <a-split></a-split>
+          <a-split height="4px" round></a-split>
+        </div>
+      </div>
+      <div class="testground-content__item">
+        <p class="testground-content-title">Float</p>
+        <div class="testground-flex">
+          <a-button type="primary" @click="() => (floatVisible = true)">Show</a-button>
+          <a-float v-model:visible="floatVisible">
+            <p>This is a float.</p>
+          </a-float>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -76,12 +92,21 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import SearchIcon from '@/components/icon/Search.vue';
+import ASplit from '@/components/ui/packages/split/ASplit.vue';
+import AButton from '@/components/ui/packages/button/AButton.vue';
 
 export default defineComponent({
   components: {
     SearchIcon,
+    AButton,
+  },
+  data() {
+    return {
+      floatVisible: false,
+    };
   },
 });
+ASplit;
 </script>
 
 

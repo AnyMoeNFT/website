@@ -37,11 +37,16 @@ export default defineComponent({
   --text-secondary-70: rgba(153, 153, 153, 0.7);
   --placeholder: #aeaeae;
   --border: #cecece;
+  --split: #efefef;
+  --scroll-bar: #ccc;
+  --mask: rgba(0, 0, 0, 0.8);
   --shadow-5: rgba(0, 0, 0, 0.05);
   --shadow-10: rgba(0, 0, 0, 0.1);
   --shadow-20: rgba(0, 0, 0, 0.2);
   --shadow-25: rgba(0, 0, 0, 0.3);
   --shadow-40: rgba(0, 0, 0, 0.4);
+  --shadow-w-10: rgba(255, 255, 255, 0.1);
+  --shadow-w-20: rgba(255, 255, 255, 0.2);
   --font-normal: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
@@ -52,13 +57,37 @@ html,
 body,
 #app {
   width: 100vw;
-  height: 100vh;
   max-width: 100vw;
-  max-height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   position: relative;
   padding: 0;
   margin: 0;
+  background: var(--bg);
+}
+
+body {
+  overflow-y: auto;
+}
+
+$scroll-width: 8px;
+
+body::-webkit-scrollbar {
+  width: $scroll-width;
+  height: $scroll-width;
+}
+body::-webkit-scrollbar-button {
+  display: none;
+}
+body::-webkit-scrollbar-thumb {
+  width: $scroll-width;
+  border-radius: $scroll-width;
+  background: var(--scroll-bar);
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+body::-webkit-scrollbar-corner {
   background: var(--bg);
 }
 
