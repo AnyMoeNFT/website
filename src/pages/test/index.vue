@@ -11,6 +11,8 @@
           <a-button type="primary">Primary</a-button>
           <a-button type="primary" round>Round</a-button>
           <a-button type="primary" round anim>Anim</a-button>
+          <a-button size="large" round>Large</a-button>
+          <a-button size="small" round>Small</a-button>
         </div>
       </div>
       <div class="testground-content__item">

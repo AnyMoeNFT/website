@@ -2,6 +2,8 @@
   <div
     :class="{
       'a-button': true,
+      'a-button--large': size === 'large',
+      'a-button--small': size === 'small',
       'a-button--primary': type === 'primary',
       'a-button--round': round,
       'a-button--anim': anim,
@@ -30,6 +32,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    size: {
+      type: String,
+      default: 'medium',
+    },
   },
   methods: {
     handleClick() {
@@ -46,8 +52,9 @@ export default defineComponent({
   justify-content: center;
   text-align: center;
   position: relative;
+  height: 48px;
   line-height: 32px;
-  padding: 7px 24px;
+  padding: 8px 24px;
   background: var(--bg);
   color: var(--primary);
   border-radius: 4px;
@@ -58,6 +65,7 @@ export default defineComponent({
   cursor: pointer;
   border: 1px solid var(--primary);
   user-select: none;
+  box-sizing: border-box;
 }
 .a-button:hover {
   filter: brightness(1.125);
@@ -67,6 +75,24 @@ export default defineComponent({
 }
 .a-button--round {
   border-radius: 24px;
+}
+.a-button.a-button--large {
+  font-size: 16px;
+  line-height: 40px;
+  padding: 10px 32px;
+  height: 60px;
+}
+.a-button.a-button--large.a-button--round {
+  border-radius: 30px;
+}
+.a-button.a-button--small {
+  font-size: 13px;
+  line-height: 28px;
+  padding: 4px 20px;
+  height: 36px;
+}
+.a-button.a-button--small.a-button--round {
+  border-radius: 18px;
 }
 .a-button--primary {
   background: var(--primary);
