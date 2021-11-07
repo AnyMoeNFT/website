@@ -1,6 +1,6 @@
 <template>
   <div class="page-footer">
-    <a-split round :margin="16"></a-split>
+    <a-split round :margin="12"></a-split>
     <div class="page-footer__content">
       <div class="logo">
         <Logo />
@@ -32,6 +32,7 @@ export default defineComponent({
   width: 100%;
   position: relative;
   user-select: none;
+  padding-bottom: 16px;
   &__content {
     width: 100%;
     height: 56px;
