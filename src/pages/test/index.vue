@@ -108,8 +108,45 @@
     </div>
     <div class="testground-content__item">
       <p class="testground-content-title">Upload</p>
+      <div style="display: flex; margin-bottom: 20px">
+        <a-button
+          round
+          size="small"
+          @click="() => (uploadStatus = 'uploading')"
+          style="margin-right: 8px"
+          >Uploading</a-button
+        >
+        <a-button
+          round
+          size="small"
+          @click="() => (uploadStatus = 'error')"
+          style="margin-right: 8px"
+          >Error</a-button
+        >
+        <a-button
+          round
+          size="small"
+          @click="() => (uploadStatus = 'success')"
+          style="margin-right: 8px"
+          >Success</a-button
+        >
+      </div>
       <div style="width: 200px; height: 200px">
-        <a-upload></a-upload>
+        <a-upload :status="uploadStatus">
+          <span>Default</span>
+          <template v-slot:dragging>
+            <span>Dragging</span>
+          </template>
+          <template v-slot:uploading>
+            <span>Uploading</span>
+          </template>
+          <template v-slot:error>
+            <span>Error</span>
+          </template>
+          <template v-slot:success>
+            <span>Success</span>
+          </template>
+        </a-upload>
       </div>
     </div>
   </div>
@@ -132,6 +169,7 @@ export default defineComponent({
       floatVisible: false,
       currentStep: 1,
       demoSteps: ['Step 1', 'Step 2', 'Step 3', 'Step 4'],
+      uploadStatus: null,
     };
   },
   methods: {
