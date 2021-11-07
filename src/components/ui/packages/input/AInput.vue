@@ -5,12 +5,16 @@
       'a-input--large': size === 'large',
       'a-input--round': round,
       'a-input--has-prefix': hasPrefix,
+      'a-input--disabled': disabled,
+      'a-input--readonly': readonly,
     }"
     :style="style"
   >
     <input
       class="a-input__inner"
       :placeholder="placeholder"
+      :disabled="disabled"
+      :readonly="readonly"
       v-model="storedValue"
       @input="handleInput"
       @keydown.enter="handleEnterDown"
@@ -36,7 +40,7 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    value: {
+    modelValue: {
       type: [String, Number],
       default: '',
     },
@@ -44,14 +48,22 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    readonly: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
-      storedValue: this.value,
+      storedValue: this.modelValue,
     };
   },
   watch: {
-    value(val) {
+    modelValue(val) {
       this.storedValue = val;
     },
   },
@@ -68,7 +80,7 @@ export default defineComponent({
   methods: {
     handleInput(e: Event) {
       const target = e.target as HTMLInputElement;
-      this.$emit('input', target.value);
+      this.$emit('update:modelValue', target.value);
     },
     handleEnterDown() {
       this.$emit('submit', this.storedValue);
@@ -162,6 +174,18 @@ export default defineComponent({
   }
   .a-input__inner {
     padding-left: 40px;
+  }
+}
+.a-input.a-input--disabled {
+  .a-input__inner {
+    color: var(--text-disabled);
+    background: var(--disabled);
+    cursor: not-allowed;
+  }
+}
+.a-input.a-input--readonly {
+  .a-input__inner {
+    background: var(--readonly);
   }
 }
 </style>

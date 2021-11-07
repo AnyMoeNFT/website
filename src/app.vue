@@ -29,11 +29,12 @@ export default defineComponent({
   --bg: #fafafa;
   --bg-alter: #fdfdfd;
   --bg-darker: #eaeaea;
+  --readonly: #f4f4f4;
   --disabled: #e3e3e3;
   --btn: #fff;
   --text: #202224;
   --text-secondary: #999;
-  --text-disabled: #bebebe;
+  --text-disabled: #bcbcbc;
   --text-80: rgba(32, 34, 36, 0.8);
   --text-70: rgba(32, 34, 36, 0.7);
   --text-secondary-80: rgba(153, 153, 153, 0.8);
@@ -99,6 +100,7 @@ span,
 p,
 a,
 input,
+button,
 pre {
   color: var(--text);
   font-family: var(--font-normal);

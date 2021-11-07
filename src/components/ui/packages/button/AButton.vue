@@ -1,5 +1,5 @@
 <template>
-  <div
+  <button
     :class="{
       'a-button': true,
       'a-button--large': size === 'large',
@@ -7,10 +7,12 @@
       'a-button--primary': type === 'primary',
       'a-button--round': round,
       'a-button--anim': anim,
+      'a-button--disabled': disabled,
     }"
+    :disabled="disabled"
   >
     <slot></slot>
-  </div>
+  </button>
 </template>
 
 <script lang="ts">
@@ -34,6 +36,10 @@ export default defineComponent({
     size: {
       type: String,
       default: 'medium',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 });
@@ -88,25 +94,32 @@ export default defineComponent({
 .a-button.a-button--small.a-button--round {
   border-radius: 18px;
 }
-.a-button--primary {
+.a-button.a-button--primary {
   background: var(--primary);
   color: var(--btn);
   box-shadow: 0 4px 10px var(--shadow-20);
   border: none;
 }
-.a-button--primary:hover {
+.a-button.a-button--primary:hover {
   filter: none;
   background: var(--primary-85);
 }
-.a-button--primary:active {
+.a-button.a-button--primary:active {
   filter: none;
   background: var(--primary-75);
 }
-.a-button--anim {
+.a-button.a-button--anim {
   transition: all 100ms ease;
 }
-.a-button--anim:hover {
+.a-button.a-button--anim:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px var(--shadow-25);
+}
+.a-button.a-button--disabled {
+  transition: none;
+  background: var(--disabled) !important;
+  color: var(--text-disabled) !important;
+  box-shadow: 0 2px 10px var(--shadow-5);
+  cursor: not-allowed;
 }
 </style>

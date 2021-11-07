@@ -36,6 +36,7 @@
           </a-input>
           <a-input placeholder="Large" size="large"></a-input>
           <a-input placeholder="Disabled" :disabled="true"></a-input>
+          <a-input placeholder="Read Only" :readonly="true" v-model="readOnlyText"></a-input>
         </div>
       </div>
       <div class="testground-content__item">
@@ -115,6 +116,7 @@ export default defineComponent({
   },
   data() {
     return {
+      readOnlyText: 'This is a read only input',
       floatVisible: false,
       currentStep: 1,
       demoSteps: ['Step 1', 'Step 2', 'Step 3', 'Step 4'],
@@ -123,12 +125,13 @@ export default defineComponent({
   methods: {
     addCurrentStep(v: number) {
       const res = this.currentStep + v;
-      console.log(res);
       if (res > 4) {
         this.currentStep = 4;
+        return;
       }
       if (res < 1) {
         this.currentStep = 1;
+        return;
       }
       this.currentStep = res;
     },
