@@ -8,7 +8,6 @@
       'a-button--round': round,
       'a-button--anim': anim,
     }"
-    @click="handleClick"
   >
     <slot></slot>
   </div>
@@ -35,11 +34,6 @@ export default defineComponent({
     size: {
       type: String,
       default: 'medium',
-    },
-  },
-  methods: {
-    handleClick() {
-      this.$emit('click');
     },
   },
 });
