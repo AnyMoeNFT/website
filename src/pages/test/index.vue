@@ -25,6 +25,12 @@
         </div>
       </div>
       <div class="testground-content__item">
+        <p class="testground-content-title">Gradient Text</p>
+        <div class="testground-flex">
+          <a-gradient-text size="24px">Default</a-gradient-text>
+        </div>
+      </div>
+      <div class="testground-content__item">
         <p class="testground-content-title">Input</p>
         <div class="testground-flex">
           <a-input placeholder="Default"></a-input>
@@ -98,6 +104,12 @@
         <div>
           <a-step :steps="demoSteps" :current="currentStep"></a-step>
         </div>
+      </div>
+    </div>
+    <div class="testground-content__item">
+      <p class="testground-content-title">Upload</p>
+      <div style="width: 200px; height: 200px">
+        <a-upload></a-upload>
       </div>
     </div>
   </div>

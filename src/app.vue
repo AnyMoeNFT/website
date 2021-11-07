@@ -26,6 +26,7 @@ export default defineComponent({
   --primary-80: rgba(15, 111, 239, 0.8);
   --primary-75: rgba(15, 111, 239, 0.75);
   --primary-70: rgba(15, 111, 239, 0.7);
+  --secondary: rgba(17, 205, 239, 0.9);
   --bg: #fafafa;
   --bg-alter: #fdfdfd;
   --bg-darker: #eaeaea;
@@ -68,6 +69,7 @@ body,
   padding: 0;
   margin: 0;
   background: var(--bg);
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
