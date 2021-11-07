@@ -14,7 +14,7 @@ export default defineComponent({
     },
     color: {
       type: String,
-      default: 'var(--split)',
+      default: 'var(--line)',
     },
     margin: {
       type: [String, Number],

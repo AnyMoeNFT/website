@@ -21,6 +21,7 @@ export default defineComponent({
 <style lang="scss">
 :root {
   --primary: rgba(15, 111, 239, 0.9);
+  --primary-full: rgba(15, 111, 239);
   --primary-85: rgba(15, 111, 239, 0.85);
   --primary-80: rgba(15, 111, 239, 0.8);
   --primary-75: rgba(15, 111, 239, 0.75);
@@ -28,16 +29,18 @@ export default defineComponent({
   --bg: #fafafa;
   --bg-alter: #fdfdfd;
   --bg-darker: #eaeaea;
+  --disabled: #e3e3e3;
   --btn: #fff;
   --text: #202224;
   --text-secondary: #999;
+  --text-disabled: #bebebe;
   --text-80: rgba(32, 34, 36, 0.8);
   --text-70: rgba(32, 34, 36, 0.7);
   --text-secondary-80: rgba(153, 153, 153, 0.8);
   --text-secondary-70: rgba(153, 153, 153, 0.7);
   --placeholder: #aeaeae;
   --border: #cecece;
-  --split: #efefef;
+  --line: #efefef;
   --scroll-bar: #ccc;
   --mask: rgba(0, 0, 0, 0.8);
   --shadow-5: rgba(0, 0, 0, 0.05);

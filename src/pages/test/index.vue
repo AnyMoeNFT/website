@@ -13,6 +13,7 @@
           <a-button type="primary" round anim>Anim</a-button>
           <a-button size="large" round>Large</a-button>
           <a-button size="small" round>Small</a-button>
+          <a-button type="primary" round :disabled="true">Disabled</a-button>
         </div>
       </div>
       <div class="testground-content__item">
@@ -34,12 +35,7 @@
             </template>
           </a-input>
           <a-input placeholder="Large" size="large"></a-input>
-          <a-input placeholder="Large round" size="large" round></a-input>
-          <a-input placeholder="Large with icon" size="large">
-            <template v-slot:prefix>
-              <SearchIcon />
-            </template>
-          </a-input>
+          <a-input placeholder="Disabled" :disabled="true"></a-input>
         </div>
       </div>
       <div class="testground-content__item">
@@ -87,6 +83,21 @@
           </a-float>
         </div>
       </div>
+      <div class="testground-content__item">
+        <p class="testground-content-title">Step</p>
+        <div style="display: flex; margin-bottom: 20px">
+          <a-button round size="small" style="margin-right: 8px" @click="addCurrentStep(-1)"
+            >Prev</a-button
+          >
+          <a-button round size="small" @click="addCurrentStep(1)">Next</a-button>
+        </div>
+        <div style="margin-bottom: 24px">
+          <a-step :steps="4" :current="currentStep"></a-step>
+        </div>
+        <div>
+          <a-step :steps="demoSteps" :current="currentStep"></a-step>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -105,7 +116,22 @@ export default defineComponent({
   data() {
     return {
       floatVisible: false,
+      currentStep: 1,
+      demoSteps: ['Step 1', 'Step 2', 'Step 3', 'Step 4'],
     };
+  },
+  methods: {
+    addCurrentStep(v: number) {
+      const res = this.currentStep + v;
+      console.log(res);
+      if (res > 4) {
+        this.currentStep = 4;
+      }
+      if (res < 1) {
+        this.currentStep = 1;
+      }
+      this.currentStep = res;
+    },
   },
 });
 ASplit;
