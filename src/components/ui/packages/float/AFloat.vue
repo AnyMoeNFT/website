@@ -107,6 +107,7 @@ export default defineComponent({
     top: 0;
     left: 0;
     z-index: -1;
+    backdrop-filter: blur(4px);
   }
   &__content {
     height: max-content;

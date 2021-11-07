@@ -1,10 +1,12 @@
 <template>
-  <div
+  <a
     :class="{
       'a-card': true,
-      'a-card--fulfill': fulfill,
+      'a-card--has-link': !!link,
+      'a-card--clean': clean,
     }"
     :style="cardStyle"
+    :href="link || 'javascript:;'"
   >
     <div class="a-card-header" v-if="hasHeader">
       <span class="a-card-header__title">{{ title }}</span>
@@ -22,7 +24,7 @@
     <div class="a-card-footer" name="footer" v-if="hasFooter">
       <slot name="footer"></slot>
     </div>
-  </div>
+  </a>
 </template>
 
 <script lang="ts">
@@ -38,9 +40,13 @@ export default defineComponent({
       type: [Number, String],
       default: 240,
     },
-    fulfill: {
+    clean: {
       type: Boolean,
       default: false,
+    },
+    link: {
+      type: String,
+      default: '',
     },
   },
   setup(props) {
@@ -67,6 +73,10 @@ export default defineComponent({
   border-radius: 16px;
   overflow: hidden;
   background: var(--bg-alter);
+  display: block;
+  text-decoration: none;
+  user-select: none;
+  cursor: default;
   > div {
     box-sizing: border-box;
   }
@@ -102,12 +112,20 @@ export default defineComponent({
     height: max-content;
     position: relative;
     padding: 10px 18px 14px 18px;
-    background: var(--bg-darker);
+    border-top: 1px solid var(--border);
   }
 }
-.a-card--fulfill {
+.a-card--has-link {
+  cursor: pointer;
+}
+.a-card--clean {
   .a-card-body {
     padding: 0;
+  }
+  .a-card-footer {
+    padding: 0;
+    background: var(--bg-alter);
+    border: none;
   }
 }
 </style>

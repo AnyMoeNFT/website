@@ -60,8 +60,8 @@
               <p>This is a footer</p>
             </template>
           </a-card>
-          <a-card fulfill>
-            <p>This is a fulfill body</p>
+          <a-card clean>
+            <p>This is a clean card</p>
             <template v-slot:footer>
               <p>This is a footer</p>
             </template>
