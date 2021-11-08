@@ -3,6 +3,9 @@ import emitter from './bus';
 export default new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
       const div = entry.target as HTMLDivElement;
       if (!div.id.startsWith('a-image') && !div.dataset.src) {
         return;
