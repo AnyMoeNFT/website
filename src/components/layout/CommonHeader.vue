@@ -1,7 +1,7 @@
 <template>
   <div class="page-header">
     <div class="logo">
-      <Logo />
+      <Logo @click="handleLogoClick" />
     </div>
     <div class="search">
       <a-input size="large" placeholder="Search any moe things..." v-model="searchKeyword" round>
@@ -32,6 +32,11 @@ export default defineComponent({
       searchKeyword: '',
     };
   },
+  methods: {
+    handleLogoClick() {
+      this.$router.push('/');
+    },
+  },
 });
 </script>
 
@@ -50,9 +55,14 @@ export default defineComponent({
     filter: drop-shadow(4px 4px 2px var(--shadow-10));
     transform: translateY(-2px);
     margin-right: 22px;
+    cursor: pointer;
+    transition: opacity 0.2s;
     &:deep(.a-button) {
       box-shadow: 0px 4px 16px var(--shadow-10);
     }
+  }
+  .logo:hover {
+    opacity: 0.95;
   }
   .search {
     flex: 1;
