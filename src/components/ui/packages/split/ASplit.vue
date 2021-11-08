@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { formatStyleSize } from '@/utils/styles';
+import { formatStyleSize } from '../../utils';
 
 export default defineComponent({
   props: {

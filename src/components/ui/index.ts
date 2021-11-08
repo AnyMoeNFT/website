@@ -8,9 +8,21 @@ import Split from './packages/split';
 import Float from './packages/float';
 import Step from './packages/step';
 import Upload from './packages/upload';
+import Image from './packages/image';
 import './styles/index.scss';
 
-const components = [Button, Card, ClickableText, GradientText, Input, Split, Float, Step, Upload];
+const components = [
+  Button,
+  Card,
+  ClickableText,
+  GradientText,
+  Input,
+  Split,
+  Float,
+  Step,
+  Upload,
+  Image,
+];
 
 const installer = (app: App) => {
   components.forEach((comp) => {

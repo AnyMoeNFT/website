@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { formatStyleSize } from '@/utils/styles';
+import { formatStyleSize } from '../../utils';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
