@@ -4,7 +4,12 @@
       <Logo @click="handleLogoClick" />
     </div>
     <div class="search">
-      <a-input size="large" placeholder="Search any moe things..." v-model="searchKeyword" round>
+      <a-input
+        size="large"
+        :placeholder="$t('common.search.placeholder')"
+        v-model="searchKeyword"
+        round
+      >
         <template v-slot:prefix>
           <Search />
         </template>
@@ -12,7 +17,9 @@
     </div>
     <div class="user"></div>
     <div class="connect">
-      <a-button class="connect-btn" type="primary" round anim>Connect Wallet</a-button>
+      <a-button class="connect-btn" type="primary" round anim>{{
+        $t('common.wallet.connect')
+      }}</a-button>
     </div>
   </div>
 </template>

@@ -6,11 +6,11 @@
         <Logo />
       </div>
       <div class="public-files">
-        <a-clickable-text type="secondary">Term of Service</a-clickable-text>
-        <a-clickable-text type="secondary">Privacy</a-clickable-text>
+        <a-clickable-text type="secondary">{{ $t('common.footer.tos') }}</a-clickable-text>
+        <a-clickable-text type="secondary">{{ $t('common.footer.privacy') }}</a-clickable-text>
       </div>
       <div class="links">
-        <a-clickable-text type="secondary">Explore</a-clickable-text>
+        <a-clickable-text type="secondary">{{ $t('common.footer.explore') }}</a-clickable-text>
       </div>
     </div>
   </div>

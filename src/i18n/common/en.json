@@ -1,0 +1,15 @@
+{
+  "common": {
+    "search": {
+      "placeholder": "Search any moe things..."
+    },
+    "wallet": {
+      "connect": "Connect Wallet"
+    },
+    "footer": {
+      "tos": "Term of Service",
+      "privacy": "Privacy",
+      "explore": "Explore"
+    }
+  }
+}
