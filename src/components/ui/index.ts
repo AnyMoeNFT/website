@@ -10,9 +10,9 @@ import Step from './packages/step';
 import Upload from './packages/upload';
 import Image from './packages/image';
 import Popper from './packages/popper';
-import PopMenu from './packages/popmenu';
+import PopupMenu from './packages/popmenu';
 
-const components = [
+const defaultComponentList = [
   Button,
   Card,
   ClickableText,
@@ -24,13 +24,31 @@ const components = [
   Upload,
   Image,
   Popper,
-  PopMenu,
+  PopupMenu,
 ];
 
-const installer = (app: App) => {
-  components.forEach((comp) => {
-    app.use(comp);
-  });
+const buildInstaller = (components: any[]) => {
+  return (app: App) => {
+    components.forEach((comp) => {
+      app.use(comp);
+    });
+  };
 };
 
-export default installer;
+export {
+  Button,
+  Card,
+  ClickableText,
+  GradientText,
+  Input,
+  Split,
+  Float,
+  Step,
+  Upload,
+  Image,
+  Popper,
+  PopupMenu,
+  buildInstaller,
+};
+
+export default buildInstaller(defaultComponentList);
