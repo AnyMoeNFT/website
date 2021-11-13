@@ -33,7 +33,7 @@ export default defineComponent({
   --readonly: #f4f4f4;
   --disabled: #e3e3e3;
   --btn: #fff;
-  --text: #202224;
+  --text: #323438;
   --text-secondary: #999;
   --text-disabled: #bcbcbc;
   --text-80: rgba(32, 34, 36, 0.8);

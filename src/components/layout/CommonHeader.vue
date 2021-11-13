@@ -17,10 +17,11 @@
     </div>
     <div class="user"></div>
     <div class="connect">
-      <a-button class="connect-btn" type="primary" round anim>{{
+      <a-button class="connect-btn" type="primary" round anim @click="showConnectFloat">{{
         $t('common.wallet.connect')
       }}</a-button>
     </div>
+    <ConnectFloat ref="connect" />
   </div>
 </template>
 
@@ -28,11 +29,13 @@
 import { defineComponent } from 'vue';
 import Logo from '@/components/icon/Logo.vue';
 import Search from '@/components/icon/Search.vue';
+import ConnectFloat from '@/components/common/ConnectFloat.vue';
 
 export default defineComponent({
   components: {
     Logo,
     Search,
+    ConnectFloat,
   },
   data() {
     return {
@@ -42,6 +45,13 @@ export default defineComponent({
   methods: {
     handleLogoClick() {
       this.$router.push('/');
+    },
+    showConnectFloat() {
+      if (!this.$refs.connect) {
+        return;
+      }
+      const floatComp = this.$refs.connect as typeof ConnectFloat;
+      floatComp.show();
     },
   },
 });

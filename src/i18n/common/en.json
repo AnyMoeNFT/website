@@ -4,7 +4,16 @@
       "placeholder": "Search any moe things..."
     },
     "wallet": {
-      "connect": "Connect Wallet"
+      "connect": "Connect Wallet",
+      "float_title": "Connect your wallet",
+      "float_desc": "Choose a provider in the following options",
+      "float_agree": {
+        "agree": "By connecting your wallet, you agree to our",
+        "and": "and",
+        "tos": "Term of Service",
+        "privacy": "Privacy Policy",
+        "end": "."
+      }
     },
     "footer": {
       "tos": "Term of Service",
