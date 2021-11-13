@@ -11,7 +11,6 @@ import Upload from './packages/upload';
 import Image from './packages/image';
 import Popper from './packages/popper';
 import PopMenu from './packages/popmenu';
-import './styles/index.scss';
 
 const components = [
   Button,
