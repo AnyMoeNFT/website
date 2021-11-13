@@ -116,6 +116,7 @@ export default defineComponent({
     margin-right: auto;
     z-index: 1;
     box-shadow: 0 12px 40px var(--shadow-w-20);
+    box-sizing: border-box;
   }
 }
 .a-float-fade-enter-active,
