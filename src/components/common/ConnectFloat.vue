@@ -1,5 +1,5 @@
 <template>
-  <a-float v-model:visible="visible" class="connect" roundRadius="36" padding="40" width="340">
+  <a-float v-model:visible="visible" class="connect" roundRadius="36" padding="40" width="420">
     <div class="connect-title">
       {{ $t('common.wallet.float_title') }}
     </div>

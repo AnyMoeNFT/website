@@ -1,7 +1,7 @@
 <template>
   <teleport to="body">
     <transition name="a-float-fade">
-      <div class="a-float" :style="floatStyles" v-if="visible">
+      <div :class="['a-float', this.class || null]" :style="floatStyles" v-if="visible">
         <div class="a-float__mask" :style="maskStyles" @click="onClose"></div>
         <div class="a-float__content" :style="contentStyles">
           <slot></slot>
@@ -17,6 +17,9 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
+    class: {
+      type: String,
+    },
     top: {
       type: [Number, String],
       default: 96,
@@ -38,7 +41,7 @@ export default defineComponent({
       default: 800,
     },
     roundRadius: {
-      type: Number,
+      type: [Number, String],
       default: 4,
     },
     lockScroll: {

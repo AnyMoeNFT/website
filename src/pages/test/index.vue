@@ -162,19 +162,34 @@
         </a-image>
       </div>
     </div>
+    <div class="testground-content__item">
+      <p class="testground-content-title">Popper</p>
+      <div class="textground-flex">
+        <a-popper>
+          <template v-slot:popup>
+            <span>popup</span>
+          </template>
+          <span>trigger</span>
+        </a-popper>
+      </div>
+    </div>
+    <div class="testground-content__item">
+      <p class="testground-content-title">PopMenu</p>
+      <div class="textground-flex">
+        <a-popup-menu :items="['Item 1', 'Item 2', 'Item 3', 'Item 4']">
+          <span>trigger</span>
+        </a-popup-menu>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import SearchIcon from '@/components/icon/Search.vue';
-import ASplit from '@/components/ui/packages/split/ASplit.vue';
-import AButton from '@/components/ui/packages/button/AButton.vue';
-
 export default defineComponent({
   components: {
     SearchIcon,
-    AButton,
   },
   data() {
     return {
@@ -200,7 +215,6 @@ export default defineComponent({
     },
   },
 });
-ASplit;
 </script>
 
 

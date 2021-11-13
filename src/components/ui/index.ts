@@ -9,6 +9,8 @@ import Float from './packages/float';
 import Step from './packages/step';
 import Upload from './packages/upload';
 import Image from './packages/image';
+import Popper from './packages/popper';
+import PopMenu from './packages/popmenu';
 import './styles/index.scss';
 
 const components = [
@@ -22,6 +24,8 @@ const components = [
   Step,
   Upload,
   Image,
+  Popper,
+  PopMenu,
 ];
 
 const installer = (app: App) => {
