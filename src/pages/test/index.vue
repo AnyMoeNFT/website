@@ -1,7 +1,7 @@
 <template>
   <div class="testground">
     <div class="testground-title">
-      <span>Anymoe UI Component TestGround</span>
+      <span>AnyUI Component TestGround</span>
     </div>
     <div class="testground-content">
       <div class="testground-content__item">
