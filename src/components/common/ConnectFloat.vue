@@ -1,5 +1,5 @@
 <template>
-  <a-float v-model:visible="visible" class="connect" roundRadius="36" padding="40" width="420">
+  <a-float v-model:visible="visible" className="connect" roundRadius="36" padding="40" width="420">
     <div class="connect-title">
       {{ $t('common.wallet.float_title') }}
     </div>
@@ -31,13 +31,11 @@
 import { defineComponent } from 'vue';
 import MetaMask from '../icon/MetaMask.vue';
 import WalletConnect from '../icon/WalletConnect.vue';
-import AClickableText from '../ui/packages/clickableText/AClickableText.vue';
 
 export default defineComponent({
   components: {
     MetaMask,
     WalletConnect,
-    AClickableText,
   },
   data() {
     return {
