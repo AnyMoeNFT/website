@@ -1,12 +1,12 @@
 <template>
   <div class="page">
     <CommonHeader v-if="useDefaultHeader" />
-    <slot name="header" v-else></slot>
+    <slot v-else name="header"></slot>
     <div class="page-content">
       <slot></slot>
     </div>
     <CommonFooter v-if="useDefaultFooter" />
-    <slot name="footer" v-else></slot>
+    <slot v-else name="footer"></slot>
   </div>
 </template>
 
@@ -16,6 +16,10 @@ import CommonHeader from './CommonHeader.vue';
 import CommonFooter from './CommonFooter.vue';
 
 export default defineComponent({
+  components: {
+    CommonHeader,
+    CommonFooter,
+  },
   props: {
     useDefaultHeader: {
       type: Boolean,
@@ -25,10 +29,6 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
-  },
-  components: {
-    CommonHeader,
-    CommonFooter,
   },
 });
 </script>

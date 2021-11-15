@@ -1,0 +1,4 @@
+.history
+node_modules
+src/lottie/**/*
+src/i18n/**/*.json

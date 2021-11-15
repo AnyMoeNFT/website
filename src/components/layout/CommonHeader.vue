@@ -5,9 +5,9 @@
     </div>
     <div class="search">
       <a-input
+        v-model="searchKeyword"
         size="large"
         :placeholder="$t('common.search.placeholder')"
-        v-model="searchKeyword"
         round
       >
         <template v-slot:prefix>
