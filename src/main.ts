@@ -4,6 +4,7 @@ import router from './router';
 import store from './store';
 import i18n from './i18n';
 import App from './app.vue';
+import '@any-design/safari-vh-patch';
 import '@any-design/anyui/styles/default.scss';
 
 // some components are not enabled by default
